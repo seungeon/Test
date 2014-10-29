@@ -1,4 +1,4 @@
-var operCount;
+var grow;
 var growCount;
 
 function setup(){
@@ -21,14 +21,14 @@ function setup(){
 function draw(){
 
 
-	drawPumkin2(255,215,0,operCount);
-	operCount=operCount-1;
-	if(operCount<-10){
-		operCount=-10;
+	drawPumkin2(255,215,0,grow);
+	grow=grow-1;
+	if(grow<-10){
+		grow=-10;
 }
 	growCount=growCount+1;
 	if(growCount>200){
-		operCount=0;
+		grow=0;
 		growCount=0;
 	}
 
