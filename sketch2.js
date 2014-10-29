@@ -1,13 +1,14 @@
-
-var a=[];
-var frame;
+var count;
+var growCount;
 
 function setup(){
 
    createCanvas(420,600);
      background(128, 0, 64);
+     count=0;
+     growCount=0;
 
-function anime(f){
+/*function anime(f){
    if(f<1){
       frame1();
    }else if(f<2){
@@ -16,42 +17,56 @@ function anime(f){
 
    }
 }
+*/
+function draw(){
 
 
-function frame1(){
+	drawPumkin2(255,215,0,count);
+	count=count-1;
+	if(count<-10){
+		count=-10;
+}
+	growCount=growCount+1;
+	if(growCount>200){
+		grow=0;
+		growCount=0;
+	}
+
+/*function frame1(){
    fill(0);
-   drawPumkin1(260,475,275,480,270,480);
+   drawPumkin1(60,70,75,85);
 }
 
 function frame2(){
    fill(255,125,0);
-   drawPumkin2(260,475,275,480,270,480);
+   drawPumkin2(60,70,10,25);
 }
 
 }
-
-function drawPumkin1(x,y,x1,y1,x2,y2){
-
+*/
 
 
 
-triangle(x,y,x1,y1,x2,y2);
-triangle(x+25,y,x1,y1,x2+10,y2);
-rect(x+10,y+10,15,5);
-triangle(x+140,y-5,x1+25,y1-5,x2+35,y2-5);
-triangle(x+160,y-5,x1+45,y1-5,x2+45,y2-5);
-rect(x+140,y+5,20,5);
+
+
+triangle(260,475,275,480,270,480);
+triangle(285,475,285,480,280,480);
+rect(270,485,15,5);
+triangle(300,470,300,475,305,475);
+triangle(320,470,320,475,315,475);
+rect(300,480,20,5);
 
 
 }
 
 
-function drawPumkin2(x,y,x1,y1,x2,y2){
+function drawPumkin2(r,g,b,a){
 
-triangle(x,y,x1,y1,x2,y2);
-triangle(x+25,y,x1,y1,x2+10,y2);
-rect(x+10,y+10,15,5);
-triangle(x+140,y-5,x1+25,y1-5,x2+35,y2-5);
-triangle(x+160,y-5,x1+45,y1-5,x2+45,y2-5);
-rect(x+140,y+5,20,5);
+
+triangle(260,475,275,480,270,480,r,g,b,a)
+triangle(285,475,285,480,280,480,r,g,b,a)
+rect(270,485,15,5,r,g,b,a)
+triangle(300,470,300,475,305,475,r,g,b,a)
+triangle(320,470,320,475,315,475,r,g,b,a)
+rect(300,480,20,5,r,g,b,a)
 }
