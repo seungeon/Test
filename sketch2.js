@@ -1,11 +1,11 @@
-var count;
+var opercount;
 var growCount;
 
 function setup(){
 
    createCanvas(420,600);
      background(128, 0, 64);
-     count=0;
+     opercount=0;
      growCount=0;
 
 /*function anime(f){
@@ -21,14 +21,14 @@ function setup(){
 function draw(){
 
 
-	drawPumkin2(255,215,0,count);
-	count=count-1;
-	if(count<-10){
-		count=-10;
+	drawPumkin2(255,215,0,opercount);
+	opercount=opercount-1;
+	if(opercount<-10){
+		opercount=-10;
 }
 	growCount=growCount+1;
 	if(growCount>200){
-		count=0;
+		opercount=0;
 		growCount=0;
 	}
 
