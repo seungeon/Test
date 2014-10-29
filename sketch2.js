@@ -1,11 +1,11 @@
-var opercount;
+var operCount;
 var growCount;
 
 function setup(){
 
    createCanvas(420,600);
      background(128, 0, 64);
-     opercount=0;
+     operCount=0;
      growCount=0;
 
 /*function anime(f){
@@ -21,14 +21,14 @@ function setup(){
 function draw(){
 
 
-	drawPumkin2(255,215,0,opercount);
-	opercount=opercount-1;
-	if(opercount<-10){
-		opercount=-10;
+	drawPumkin2(255,215,0,operCount);
+	operCount=operCount-1;
+	if(operCount<-10){
+		operCount=-10;
 }
 	growCount=growCount+1;
 	if(growCount>200){
-		opercount=0;
+		operCount=0;
 		growCount=0;
 	}
 
@@ -48,6 +48,8 @@ function frame2(){
 
 
 
+fill(0);
+stoke(0);
 
 triangle(260,475,275,480,270,480);
 triangle(285,475,285,480,280,480);
