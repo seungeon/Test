@@ -28,7 +28,7 @@ function draw(){
 }
 	growCount=growCount+1;
 	if(growCount>200){
-		grow=0;
+		count=0;
 		growCount=0;
 	}
 
@@ -70,3 +70,4 @@ triangle(300,470,300,475,305,475,r,g,b,a)
 triangle(320,470,320,475,315,475,r,g,b,a)
 rect(300,480,20,5,r,g,b,a)
 }
+
